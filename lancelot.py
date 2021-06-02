@@ -6,7 +6,7 @@ import random
 from dotenv import load_dotenv
 load_dotenv()
 
-client = commands.Bot(command_prefix = '!')
+client = commands.Bot(command_prefix = '--')
 
 #Carga de Cogs
 
