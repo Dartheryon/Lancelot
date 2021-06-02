@@ -36,7 +36,8 @@ async def hola(ctx):
     nickname = ctx.author.name
     await ctx.channel.send(f'Hola {nickname}!  Soy Lancelot. Un gusto saludarte')
 
-@client.command(aliases =['8ball'])
+@client.command(aliases =['8ball','oraculo','oráculo']) 
+
 async def _8ball(ctx, *, pregunta):
     respuestas = ['Es cierto.',
                 'Es decididamente así.',
