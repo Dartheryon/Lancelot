@@ -13,6 +13,7 @@ class Fun(commands.Cog):
     dID = os.getenv("dID")
     aramID = os.getenv("aramID")
     crysID = os.getenv("crysID")
+    camiID = os.getenv("camiID")
 
     @commands.Cog.listener()
     async def on_message(self,ctx):
@@ -21,6 +22,7 @@ class Fun(commands.Cog):
         author = ctx.author
         content = ctx.content
         contentLow = content.lower()
+        #Saludos personalizados
         if author.id == int(self.myID) and "hola lancelot" in contentLow:
             await ctx.channel.send('Hola poderoso '+author.mention+'! Gracias por crearme! :metal:')
         
@@ -29,12 +31,15 @@ class Fun(commands.Cog):
         
         elif author.id == int(self.crysID) and "hola lancelot" in contentLow:
             await ctx.channel.send('Hola '+author.mention+', bella creación del universo!')
+        
+        elif author.id == int(self.camiID) and "hola lancelot" in contentLow:
+            await ctx.channel.send('Hola '+author.mention+', mi creador me dice que eres el mejor sobrino del mundo! :metal: ')
 
         elif ("hola bebés" in contentLow) or ("hola bebes" in contentLow) or ("hola lancelot" in contentLow):
             print('entró!')
             if author.id == int(self.dID):
                 await ctx.channel.send('Llegó la owner más **inteligente y hermosa** de todo Discord! Hola '+author.mention+ '! Soy tu simp, digo tu bot! Te amoooooo! ❤')
-
+        #Fin Saludos personalizados
 
     @commands.command(aliases=['oráculo'])
     async def oraculo(self, ctx, *, pregunta):
@@ -59,6 +64,14 @@ class Fun(commands.Cog):
                 'Eso no se ve bien en el futuro',
                 'Muy dudoso.']
         await ctx.send(f'Pregunta: {pregunta}\nRespuesta: {random.choice(respuestas)}')
-        
+
+    @commands.command()
+    async def hola(self, ctx, member: discord.Member = None):
+        if not member:
+            await ctx.send('Menciona un usuario')
+        else:
+            await ctx.send(f'Hola {member.mention}! Eres increible!! Espero verte más seguido por acá 🙃')
+
+
 def setup(client):
     client.add_cog(Fun(client))
