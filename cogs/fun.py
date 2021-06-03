@@ -52,7 +52,9 @@ class Fun(commands.Cog):
             await ctx.channel.send(embed=f_embed)
 
         elif contentLow == "hola lancelot":
+            print('entro1')
             if author.id != int(self.myID) and author.id != int(self.aramID) and author.id != int(self.crysID) and author.id != int(self.camiID):
+                print('entro2')
                 await ctx.channel.send('Hola '+author.mention+'! espero que tengas un gran día! 🙃')
 
                 
