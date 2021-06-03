@@ -12,7 +12,7 @@ class Utils(commands.Cog):
         await ctx.send(f':ping_pong: Pong!\nMi latencia es de {(round(self.client.latency * 1000))}ms')
 
     @commands.command()
-    async def clear(ctx, cantidad = 5):
+    async def clean(self,ctx, cantidad:int = 5):
         await ctx.channel.purge(limit=cantidad + 1)
 
 def setup(client):
