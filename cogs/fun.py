@@ -11,6 +11,8 @@ class Fun(commands.Cog):
         self.client = client
     myID = os.getenv("myID")
     dID = os.getenv("dID")
+    aramID = os.getenv("aramID")
+    crysID = os.getenv("crysID")
 
     @commands.Cog.listener()
     async def on_message(self,ctx):
