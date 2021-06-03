@@ -22,13 +22,13 @@ class Fun(commands.Cog):
         if author.id == int(self.myID) and "hola lancelot" in contentLow:
             await ctx.channel.send('Hola poderoso '+author.mention+'! Gracias por crearme! :metal:')
         
-        if author.id == int(self.aramID) and "hola lancelot" in contentLow:
+        elif author.id == int(self.aramID) and "hola lancelot" in contentLow:
             await ctx.channel.send('Hola Grand Master del ajedrez, '+author.mention)
         
-        if author.id == int(self.crysID) and "hola lancelot" in contentLow:
+        elif author.id == int(self.crysID) and "hola lancelot" in contentLow:
             await ctx.channel.send('Hola '+author.mention+', bella creación del universo :crys2:')
 
-        if ("hola bebés" in contentLow) or ("hola bebes" in contentLow) or ("hola lancelot" in contentLow):
+        elif ("hola bebés" in contentLow) or ("hola bebes" in contentLow) or ("hola lancelot" in contentLow):
             print('entró!')
             if author.id == int(self.dID):
                 await ctx.channel.send('Llegó la owner más **inteligente y hermosa** de todo Discord! :stich_hearts: Hola '+author.mention+ '! Soy tu simp, digo tu bot! :crys2: Te amoooooo! ❤')
