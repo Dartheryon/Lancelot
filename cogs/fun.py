@@ -23,7 +23,7 @@ class Fun(commands.Cog):
             await ctx.channel.send('Hola poderoso '+author.mention+'! Gracias por crearme! :metal:')
         
         if author.id == int(self.aramID) and "hola lancelot" in contentLow:
-            await ctx.channel.send('Hola Grand Master del ajedrez, '+author.mention+' 7u7')
+            await ctx.channel.send('Hola Grand Master del ajedrez, '+author.mention)
         
         if author.id == int(self.crysID) and "hola lancelot" in contentLow:
             await ctx.channel.send('Hola '+author.mention+', bella creación del universo :crys2:')
