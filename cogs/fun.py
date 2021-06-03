@@ -21,6 +21,12 @@ class Fun(commands.Cog):
         contentLow = content.lower()
         if author.id == int(self.myID) and "hola lancelot" in contentLow:
             await ctx.channel.send('Hola poderoso '+author.mention+'! Gracias por crearme! :metal:')
+        
+        if author.id == int(self.aramID) and "hola lancelot" in contentLow:
+            await ctx.channel.send('Hola Grand Master del ajedrez, '+author.mention+' 7u7')
+        
+        if author.id == int(self.crysID) and "hola lancelot" in contentLow:
+            await ctx.channel.send('Hola '+author.mention+', bella creación del universo :crys2:')
 
         if ("hola bebés" in contentLow) or ("hola bebes" in contentLow):
             print('entró!')
