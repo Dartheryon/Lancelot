@@ -43,7 +43,7 @@ class Fun(commands.Cog):
 
         #F en el Chat
         elif contentLow == 'f':
-            await ctx.channel.send(file=discord.File('images/F.jpg'))
+            await ctx.channel.send(file=discord.File('./images/F.jpg'))
 
     @commands.command(aliases=['oráculo'])
     async def oraculo(self, ctx, *, pregunta):
