@@ -24,6 +24,9 @@ class Fun(commands.Cog):
         contentLow = content.lower()
         SaludosporID =[self.myID,self.dID,self.aramID,self.crysID,self.camiID]
         #Saludos personalizados
+        
+        if contentLow == 'Messirve' or contentLow == 'messirve':
+            await ctx.channel.send('https://cdn.discordapp.com/attachments/821262888429158412/850076945777557514/847701712621404170.png')
         if contentLow == 'f':
             f_embed = discord.Embed(colour = 0x2f3136)
             f_embed.set_image(url='https://raw.githubusercontent.com/Dartheryon/Lancelot/master/images/F.jpg')
