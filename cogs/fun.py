@@ -43,9 +43,8 @@ class Fun(commands.Cog):
 
         #F en el Chat
         elif contentLow == 'f':
-            memeF = 'https://raw.githubusercontent.com/Dartheryon/Lancelot/master/images/F.jpg'
             f_embed = discord.Embed(colour = 0x2f3136)
-            f_embed.set_image(url=memeF)
+            f_embed.set_image(url='https://raw.githubusercontent.com/Dartheryon/Lancelot/master/images/F.jpg')
             await ctx.channel.send(embed=f_embed)
 
     @commands.command(aliases=['oráculo'])
