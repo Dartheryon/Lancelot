@@ -4,17 +4,16 @@ import discord
 import random
 from discord.ext import commands
 from dotenv import load_dotenv
-
 load_dotenv()
 
 class Fun(commands.Cog):
     def __init__(self, client):
         self.client = client
-    myID = os.getenv("myID")
-    dID = os.getenv("dID")
-    aramID = os.getenv("aramID")
-    crysID = os.getenv("crysID")
-    camiID = os.getenv("camiID")
+    myID = int(os.getenv("myID"))
+    dID = int(os.getenv("dID"))
+    aramID = int(os.getenv("aramID"))
+    crysID = int(os.getenv("crysID"))
+    camiID = int(os.getenv("camiID"))
 
     @commands.Cog.listener()
     async def on_message(self,ctx):
@@ -23,41 +22,31 @@ class Fun(commands.Cog):
         author = ctx.author
         content = ctx.content
         contentLow = content.lower()
-        print(contentLow)
+        SaludosporID =[self.myID,self.dID,self.aramID,self.crysID,self.camiID]
         #Saludos personalizados
-
-        if author.id == int(self.myID) and "hola lancelot" in contentLow:
-            await ctx.channel.send('Hola poderoso '+author.mention+'! Gracias por crearme! :metal:')
-        
-        elif author.id == int(self.aramID) and "hola lancelot" in contentLow:
-            await ctx.channel.send('Hola Grand Master del ajedrez, '+author.mention)
-        
-        elif author.id == int(self.crysID) and "hola lancelot" in contentLow:
-            await ctx.channel.send('Hola '+author.mention+', bella creación del universo!')
-        
-        elif author.id == int(self.camiID) and "hola lancelot" in contentLow:
-            await ctx.channel.send('Hola '+author.mention+', mi creador me dice que eres el mejor sobrino del mundo! :metal: ')
-
-        elif ("hola bebés" in contentLow) or ("hola bebes" in contentLow) or ("hola lancelot" in contentLow):
-            if author.id == int(self.dID):
-                await ctx.channel.send('Llegó la owner más **inteligente y hermosa** de todo Discord! Hola '+author.mention+ '! Soy tu simp, digo tu bot! Te amoooooo! ❤')
-        #genérico
-
-        #Fin Saludos personalizados
-
-        #F en el Chat
-        elif contentLow == 'f':
+        if contentLow == 'f':
             f_embed = discord.Embed(colour = 0x2f3136)
             f_embed.set_image(url='https://raw.githubusercontent.com/Dartheryon/Lancelot/master/images/F.jpg')
             await ctx.channel.send(embed=f_embed)
+        elif "hola lancelot" in contentLow:
+            if author.id not in SaludosporID:
+                await ctx.channel.send('Hola '+author.mention+'! Te deseo que tengas un gran día! 🙃')
+            elif author.id == self.myID:
+                await ctx.channel.send('Hola poderoso '+author.mention+'! Gracias por crearme! :metal:')
+            elif author.id == int(self.aramID) and "hola lancelot" in contentLow:
+                await ctx.channel.send('Hola Grand Master del ajedrez, '+author.mention)
+            elif author.id == int(self.crysID) and "hola lancelot" in contentLow:
+                await ctx.channel.send('Hola '+author.mention+', bella creación del universo!')
+            elif author.id == int(self.camiID) and "hola lancelot" in contentLow:
+                await ctx.channel.send('Hola '+author.mention+', mi creador me dice que eres el mejor sobrino del mundo! :metal:')
+            elif author.id == int(self.dID):
+                await ctx.channel.send('Llegó la owner más **inteligente y hermosa** de todo Discord! Hola '+author.mention+ '! Soy tu simp, digo tu bot! Te amoooooo! ❤')
 
-        elif contentLow == "hola lancelot":
-            print('entro1')
-            if author.id != int(self.myID) and author.id != int(self.aramID) and author.id != int(self.crysID) and author.id != int(self.camiID):
-                print('entro2')
-                await ctx.channel.send('Hola '+author.mention+'! espero que tengas un gran día! 🙃')
+        if ("hola bebés" in contentLow) or ("hola bebes" in contentLow):
+            if author.id == int(self.dID):
+                await ctx.channel.send('Llegó la owner más **inteligente y hermosa** de todo Discord! Hola '+author.mention+ '! Soy tu simp, digo tu bot! Te amoooooo! ❤')
+        #Fin Saludos personalizados
 
-                
     @commands.command(aliases=['oráculo'])
     async def oraculo(self, ctx, *, pregunta):
         respuestas = ['Es cierto.',
@@ -87,8 +76,7 @@ class Fun(commands.Cog):
         if not member:
             await ctx.send('Menciona un usuario')
         else:
-            await ctx.delete()
-            await ctx.send(f'Hey {member.mention}! Soy Lancelot y me dijeron que eres increible!! Espero verte más seguido por acá 🙃')
+            await ctx.send(f'Hola {member.mention}! Eres increible!! Espero verte más seguido por acá 🙃')
 
 
 def setup(client):
