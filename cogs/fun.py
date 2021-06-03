@@ -33,7 +33,7 @@ class Fun(commands.Cog):
         elif ("hola bebés" in contentLow) or ("hola bebes" in contentLow) or ("hola lancelot" in contentLow):
             print('entró!')
             if author.id == int(self.dID):
-                await ctx.channel.send('Llegó la owner más **inteligente y hermosa** de todo Discord! :stich_hearts: Hola '+author.mention+ '! Soy tu simp, digo tu bot! :crys2: Te amoooooo! ❤')
+                await ctx.channel.send('Llegó la owner más **inteligente y hermosa** de todo Discord! Hola '+author.mention+ '! Soy tu simp, digo tu bot! Te amoooooo! ❤')
 
 
     @commands.command(aliases=['oráculo'])
