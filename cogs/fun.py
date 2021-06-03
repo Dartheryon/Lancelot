@@ -37,14 +37,15 @@ class Fun(commands.Cog):
             await ctx.channel.send('Hola '+author.mention+', mi creador me dice que eres el mejor sobrino del mundo! :metal: ')
 
         elif ("hola bebés" in contentLow) or ("hola bebes" in contentLow) or ("hola lancelot" in contentLow):
-            print('entró!')
             if author.id == int(self.dID):
                 await ctx.channel.send('Llegó la owner más **inteligente y hermosa** de todo Discord! Hola '+author.mention+ '! Soy tu simp, digo tu bot! Te amoooooo! ❤')
         #Fin Saludos personalizados
 
         #F en el Chat
         elif contentLow == 'f':
-            await ctx.channel.send('https://raw.githubusercontent.com/Dartheryon/Lancelot/master/images/F.jpg')
+            memeF = 'https://raw.githubusercontent.com/Dartheryon/Lancelot/master/images/F.jpg'
+            await ctx.channel.send(f'{memeF}')
+            
 
     @commands.command(aliases=['oráculo'])
     async def oraculo(self, ctx, *, pregunta):
