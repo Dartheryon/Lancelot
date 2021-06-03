@@ -41,6 +41,10 @@ class Fun(commands.Cog):
                 await ctx.channel.send('Llegó la owner más **inteligente y hermosa** de todo Discord! Hola '+author.mention+ '! Soy tu simp, digo tu bot! Te amoooooo! ❤')
         #Fin Saludos personalizados
 
+        #F en el Chat
+        elif contentLow == 'f':
+            await ctx.channel.send(file=discord.File('images/F.jpg'))
+
     @commands.command(aliases=['oráculo'])
     async def oraculo(self, ctx, *, pregunta):
         respuestas = ['Es cierto.',
