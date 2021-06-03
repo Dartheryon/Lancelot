@@ -36,7 +36,7 @@ class Fun(commands.Cog):
             elif author.id == int(self.aramID) and "hola lancelot" in contentLow:
                 await ctx.channel.send('Hola Grand Master del ajedrez, '+author.mention)
             elif author.id == int(self.crysID) and "hola lancelot" in contentLow:
-                await ctx.channel.send('Hola '+author.mention+' <:crys2:846388711637254205>, bella creación del universo!')
+                await ctx.channel.send('Hola '+author.mention+'<:Crys:831029669616287784>, bella creación del universo! <:crys2:846388711637254205>')
             elif author.id == int(self.camiID) and "hola lancelot" in contentLow:
                 await ctx.channel.send('Hola '+author.mention+', mi creador me dice que eres el mejor sobrino del mundo! :metal:')
             elif author.id == int(self.dID):
