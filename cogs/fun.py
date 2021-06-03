@@ -39,6 +39,8 @@ class Fun(commands.Cog):
         elif ("hola bebés" in contentLow) or ("hola bebes" in contentLow) or ("hola lancelot" in contentLow):
             if author.id == int(self.dID):
                 await ctx.channel.send('Llegó la owner más **inteligente y hermosa** de todo Discord! Hola '+author.mention+ '! Soy tu simp, digo tu bot! Te amoooooo! ❤')
+        elif("hola lancelot" in contentLow):
+            await ctx.channel.send('Hola '+author.mention+' espero que tengas un gran día! 🙃 ')
         #Fin Saludos personalizados
 
         #F en el Chat
