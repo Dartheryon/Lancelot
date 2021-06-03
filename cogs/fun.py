@@ -23,7 +23,9 @@ class Fun(commands.Cog):
         author = ctx.author
         content = ctx.content
         contentLow = content.lower()
+        print(contentLow)
         #Saludos personalizados
+
         if author.id == int(self.myID) and "hola lancelot" in contentLow:
             await ctx.channel.send('Hola poderoso '+author.mention+'! Gracias por crearme! :metal:')
         
@@ -39,8 +41,8 @@ class Fun(commands.Cog):
         elif ("hola bebés" in contentLow) or ("hola bebes" in contentLow) or ("hola lancelot" in contentLow):
             if author.id == int(self.dID):
                 await ctx.channel.send('Llegó la owner más **inteligente y hermosa** de todo Discord! Hola '+author.mention+ '! Soy tu simp, digo tu bot! Te amoooooo! ❤')
-        elif("hola lancelot" in contentLow):
-            await ctx.channel.send('Hola '+author.mention+' espero que tengas un gran día! 🙃 ')
+        #genérico
+
         #Fin Saludos personalizados
 
         #F en el Chat
@@ -49,6 +51,11 @@ class Fun(commands.Cog):
             f_embed.set_image(url='https://raw.githubusercontent.com/Dartheryon/Lancelot/master/images/F.jpg')
             await ctx.channel.send(embed=f_embed)
 
+        if contentLow == "hola lancelot":
+            if author.id != int(self.myID) and author.id != int(self.aramID) and author.id != int(self.crysID) and author.id != int(self.camiID):
+                await ctx.channel.send('Hola '+author.mention+'! espero que tengas un gran día! 🙃')
+
+                
     @commands.command(aliases=['oráculo'])
     async def oraculo(self, ctx, *, pregunta):
         respuestas = ['Es cierto.',
