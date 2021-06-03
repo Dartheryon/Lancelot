@@ -51,7 +51,7 @@ class Fun(commands.Cog):
             f_embed.set_image(url='https://raw.githubusercontent.com/Dartheryon/Lancelot/master/images/F.jpg')
             await ctx.channel.send(embed=f_embed)
 
-        if contentLow == "hola lancelot":
+        elif contentLow == "hola lancelot":
             if author.id != int(self.myID) and author.id != int(self.aramID) and author.id != int(self.crysID) and author.id != int(self.camiID):
                 await ctx.channel.send('Hola '+author.mention+'! espero que tengas un gran día! 🙃')
 
