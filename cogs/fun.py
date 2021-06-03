@@ -32,11 +32,11 @@ class Fun(commands.Cog):
             if author.id not in SaludosporID:
                 await ctx.channel.send('Hola '+author.mention+'! Te deseo que tengas un gran día! 🙃')
             elif author.id == self.myID:
-                await ctx.channel.send('Hola poderoso '+author.mention+'! Gracias por crearme! :metal:')
+                await ctx.channel.send('Hola poderoso '+author.mention+'! Gracias por crearme! <:crys2:846388711637254205> :metal:')
             elif author.id == int(self.aramID) and "hola lancelot" in contentLow:
                 await ctx.channel.send('Hola Grand Master del ajedrez, '+author.mention)
             elif author.id == int(self.crysID) and "hola lancelot" in contentLow:
-                await ctx.channel.send('Hola '+author.mention+', bella creación del universo!')
+                await ctx.channel.send('Hola '+author.mention+' <:crys2:846388711637254205>, bella creación del universo!')
             elif author.id == int(self.camiID) and "hola lancelot" in contentLow:
                 await ctx.channel.send('Hola '+author.mention+', mi creador me dice que eres el mejor sobrino del mundo! :metal:')
             elif author.id == int(self.dID):
