@@ -31,7 +31,7 @@ class Fun(commands.Cog):
             await ctx.channel.send(embed=f_embed)
         if contentLow == 'f':
             f_embed = discord.Embed(colour = 0x2f3136)
-            f_embed.set_image(url='https://raw.githubusercontent.com/Dartheryon/Lancelot/master/images/F.jpg')
+            f_embed.set_image(url='https://media1.tenor.com/images/a14d9b4e9a47f64890af0434a45b0388/tenor.gif')
             await ctx.channel.send(embed=f_embed)
         elif "hola lancelot" in contentLow:
             if author.id not in SaludosporID:
