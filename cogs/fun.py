@@ -4,8 +4,7 @@ import discord
 import random
 from discord.ext import commands
 from dotenv import load_dotenv
-import aiohttp
-import io
+
 load_dotenv()
 
 class Fun(commands.Cog):
@@ -45,12 +44,7 @@ class Fun(commands.Cog):
 
         #F en el Chat
         elif contentLow == 'f':
-            async with aiohttp.ClientSession() as session:
-                async with session.get("https://raw.githubusercontent.com/Dartheryon/Lancelot/master/images/F.jpg") as resp:
-                    if resp.status != 200:
-                        return await ctx.channel.send('No se pudo descargar la imagen')
-                    data = io.BytesIO(await resp.read())
-                await ctx.channel.send(file=discord.File(data, 'F.png'))
+            await ctx.channel.send('https://raw.githubusercontent.com/Dartheryon/Lancelot/master/images/F.jpg')
 
     @commands.command(aliases=['oráculo'])
     async def oraculo(self, ctx, *, pregunta):
