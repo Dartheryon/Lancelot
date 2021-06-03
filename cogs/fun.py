@@ -44,8 +44,9 @@ class Fun(commands.Cog):
         #F en el Chat
         elif contentLow == 'f':
             memeF = 'https://raw.githubusercontent.com/Dartheryon/Lancelot/master/images/F.jpg'
-            await ctx.channel.send(f'{memeF}')
-            
+            f_embed = discord.Embed(colour = 0x2f3136)
+            f_embed.set_image(url=memeF)
+            await ctx.channel.send(embed=f_embed)
 
     @commands.command(aliases=['oráculo'])
     async def oraculo(self, ctx, *, pregunta):
