@@ -48,7 +48,7 @@ class Fun(commands.Cog):
             async with aiohttp.ClientSession() as session:
                 async with session.get("https://raw.githubusercontent.com/Dartheryon/Lancelot/master/images/F.jpg") as resp:
                     if resp.status != 200:
-                        return await ctx.send('No se pudo descargar la imagen')
+                        return await ctx.channel.send('No se pudo descargar la imagen')
                     data = io.BytesIO(await resp.read())
                 await ctx.channel.send(file=discord.File(data, 'F.png'))
 
