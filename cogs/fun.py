@@ -70,7 +70,7 @@ class Fun(commands.Cog):
         if not member:
             await ctx.send('Menciona un usuario')
         else:
-            await ctx.send(f'Hola {member.mention}! Eres increible!! Espero verte más seguido por acá 🙃')
+            await ctx.send(f'Hey {member.mention}! Soy Lancelot y me dijeron que eres increible!! Espero verte más seguido por acá 🙃')
 
 
 def setup(client):
