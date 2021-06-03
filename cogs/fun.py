@@ -28,7 +28,7 @@ class Fun(commands.Cog):
             await ctx.channel.send('Hola Grand Master del ajedrez, '+author.mention)
         
         elif author.id == int(self.crysID) and "hola lancelot" in contentLow:
-            await ctx.channel.send('Hola '+author.mention+', bella creación del universo :crys2:')
+            await ctx.channel.send('Hola '+author.mention+', bella creación del universo!')
 
         elif ("hola bebés" in contentLow) or ("hola bebes" in contentLow) or ("hola lancelot" in contentLow):
             print('entró!')
