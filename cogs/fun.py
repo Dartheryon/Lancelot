@@ -78,6 +78,5 @@ class Fun(commands.Cog):
         else:
             await ctx.send(f'Hola {member.mention}! Eres increible!! Espero verte más seguido por acá 🙃')
 
-
 def setup(client):
     client.add_cog(Fun(client))
