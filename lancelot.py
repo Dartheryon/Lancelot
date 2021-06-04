@@ -34,13 +34,13 @@ async def ch_presence():
             await client.change_presence(activity=discord.Game(name=juego))
 
         elif accion == "Listening":
-            songs = ['Metallica', 'Gothic Metal', 'Metal Colombiano', 'Frank Sinatra', 'AC/DC','Therion', 'Cantar a Dandelius','Mozart' ]
+            songs = ['Metallica', 'Gothic Metal', 'Metal Colombiano', 'Frank Sinatra', 'AC/DC','Therion', 'Cantar a Dandelius','Mozart','Rock Argentino']
             song = random.choice(songs)
 
             await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name = song))
 
         elif accion == "Watching":
-            shows = ['The boys', 'Naruto', 'Kimetsu no Yaiba ', 'Star Wars', 'como juegan contigo','Pulp Fiction', 'Invincible','crecer mi amor por Dani ❤❤' ]
+            shows = ['The Boys', 'Naruto', 'Kimetsu no Yaiba ', 'Star Wars', 'como juegan contigo','Pulp Fiction', 'Invincible','crecer mi amor por Dani ❤❤' ]
             show = random.choice(shows)
 
             await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = show))
