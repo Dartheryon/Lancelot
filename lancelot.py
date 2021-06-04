@@ -40,7 +40,7 @@ async def ch_presence():
             await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name = song))
 
         elif accion == "Watching":
-            shows = ['The boys', 'Naruto', 'Kimetsu no Yaiba ', 'Star Wars', 'como juegan contigo','Arrow', 'John Wick','a Dani ❤❤' ]
+            shows = ['The boys', 'Naruto', 'Kimetsu no Yaiba ', 'Star Wars', 'como juegan contigo','Pulp Fiction', 'Invincible','crecer mi amor por Dani ❤❤' ]
             show = random.choice(shows)
 
             await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = show))
