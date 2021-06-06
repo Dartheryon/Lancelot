@@ -28,7 +28,7 @@ async def ch_presence():
     while not client.is_closed():
         accion = random.choice(tiposPresencia)
         if accion == 'Playing':
-            juegos = ["quitarte a tu novia","quitarte a tu novio","MTG","CSGO",'Pokémon Esmeralda',"Genshin Impact","World of Warcraft","Bloons TD battles"]
+            juegos = ["quitarte a tu novia","quitarte a tu novio","MTGArena","CSGO",'Pokémon Esmeralda',"Genshin Impact","World of Warcraft","Bloons TD battles"]
             juego = random.choice(juegos)
 
             await client.change_presence(activity=discord.Game(name=juego))
