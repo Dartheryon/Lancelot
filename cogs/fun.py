@@ -45,11 +45,11 @@ class Fun(commands.Cog):
             elif author.id == int(self.camiID) and "hola lancelot" in contentLow:
                 await ctx.channel.send('Hola '+author.mention+', mi creador me dice que eres el mejor sobrino del mundo! :metal:')
             elif author.id == int(self.dID):
-                await ctx.channel.send('Llegó la owner más **inteligente y hermosa** de todo Discord! <:stich_hearts:847701255588675595> Hola '+author.mention+ '! Soy tu simp <:emoji_73:846389931193401345>, digo tu bot! Te amoooooo! <:Dani:831028381729554472> ❤')
+                await ctx.channel.send('Llegó la owner más **inteligente y hermosa** de todo Discord! <:stich_hearts:847701255588675595> Hola '+author.mention+ '!')
 
         if ("hola bebés" in contentLow) or ("hola bebes" in contentLow):
             if author.id == int(self.dID):
-                await ctx.channel.send('Llegó la owner más **inteligente y hermosa** de todo Discord! <:stich_hearts:847701255588675595> Hola '+author.mention+ '! Soy tu simp <:emoji_73:846389931193401345>, digo tu bot! Te amoooooo! <:Dani:831028381729554472> ❤')
+                await ctx.channel.send('Llegó la owner más **inteligente y hermosa** de todo Discord! <:stich_hearts:847701255588675595> Hola '+author.mention+ '!')
         #Fin Saludos personalizados
 
     @commands.command(aliases=['oráculo'])
