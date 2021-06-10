@@ -1,9 +1,12 @@
 import os
 from cogs.moderacion import Moderacion
+from cogs.utils import Utils
 import discord
 import random
 from discord.ext import commands
 from dotenv import load_dotenv
+import asyncio
+
 load_dotenv()
 
 class Fun(commands.Cog):
@@ -29,6 +32,12 @@ class Fun(commands.Cog):
             f_embed = discord.Embed(colour = 0x2f3136)
             f_embed.set_image(url='https://raw.githubusercontent.com/Dartheryon/Lancelot/master/images/messirve.png')
             await ctx.channel.send(embed=f_embed)
+        if "Échale un vistazo en DIS" in content:
+            print('BUMP')
+            await ctx.channel.send("Les avisaré cuando sea hora de otro bump!")
+            await asyncio.sleep(120*60)
+            bumped_embed = discord.Embed(title="Hora de otro bump!", description=f'Ya pueden bumpear de nuevo el servidor :metal:')
+            await ctx.channel.send(embed=bumped_embed)
         if contentLow == 'f':
             f_embed = discord.Embed(colour = 0x2f3136)
             f_embed.set_image(url='https://media1.tenor.com/images/a14d9b4e9a47f64890af0434a45b0388/tenor.gif')
