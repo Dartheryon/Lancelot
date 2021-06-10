@@ -17,6 +17,7 @@ class Fun(commands.Cog):
     aramID = int(os.getenv("aramID"))
     crysID = int(os.getenv("crysID"))
     camiID = int(os.getenv("camiID"))
+    disboardID = int(os.getenv("disboardID"))
 
     @commands.Cog.listener()
     async def on_message(self,ctx):
@@ -32,8 +33,7 @@ class Fun(commands.Cog):
             f_embed = discord.Embed(colour = 0x2f3136)
             f_embed.set_image(url='https://raw.githubusercontent.com/Dartheryon/Lancelot/master/images/messirve.png')
             await ctx.channel.send(embed=f_embed)
-        if "Échale un vistazo en DIS" in content:
-            print('BUMP')
+        if "Échale un vistazo en DIS" in content and author.id == self.disboardID:
             await ctx.channel.send("Les avisaré cuando sea hora de otro bump!")
             await asyncio.sleep(120*60)
             bumped_embed = discord.Embed(title="Hora de otro bump!", description=f'Ya pueden bumpear de nuevo el servidor :metal:')
